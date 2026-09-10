@@ -1,0 +1,8 @@
+{
+  "name": "memory-sky", "version": "0.2.0", "private": true,
+  "type": "module", "description": "An interactive pastel memory constellation with a spiral galaxy view.",
+  "license": "MIT", "exports": {".": "./src/index.js", "./style.css": "./src/style.css"},
+  "files": ["src", "LICENSE", "README.md", "使用说明.md", "THIRD_PARTY_NOTICES.md"],
+  "scripts": {"dev": "vite --host 127.0.0.1 --port 5199", "build": "vite build"},
+  "dependencies": {"three": "0.185.1"}, "devDependencies": {"vite": "7.3.6"}
+}
