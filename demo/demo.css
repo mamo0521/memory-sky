@@ -1,0 +1,5 @@
+html,body{margin:0;min-height:100%;background:#eee9e7}
+body{min-height:100dvh;display:grid;place-items:center}
+#sky{width:min(540px,calc(100vw - 32px),calc((100dvh - 32px)*.5806451613));aspect-ratio:18/31;overflow:hidden;border-radius:24px;box-shadow:0 12px 44px #30273918}
+#sky>.memory-sky{min-height:0}
+@media(max-width:600px){#sky{width:100%;height:100dvh;aspect-ratio:auto;border-radius:0;box-shadow:none}}
