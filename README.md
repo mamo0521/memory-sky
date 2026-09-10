@@ -7,9 +7,9 @@
 >
 > Plain JavaScript + Three.js. No framework, no backend, your data never leaves the page.
 
-<p align="center"><img src="images/01-overview.jpg" width="340" alt="记忆星穹全景"></p>
+<p align="center"><img src="docs/images/01-overview.jpg" width="340" alt="记忆星穹全景"></p>
 
-**👉 在线试玩**：（GitHub Pages 地址，仓库建好后补）
+**👉 [在线试玩](https://mamo0521.github.io/memory-sky/)** · [GitHub 仓库](https://github.com/mamo0521/memory-sky)
 
 ---
 
@@ -22,11 +22,11 @@
 - **右上角 ⚙**：换造型（自由星空 / 恒星轨道 / 星环）、换背景色（四种）、重置视角。切到某个星座时永远按星座的样子画；这时再点造型，会先回到全部记忆再变形。
 - 手机单指转、双指缩放；电脑拖动转、滚轮缩放。竖屏横屏都行。
 
-<p align="center"><img src="images/02-pick.jpg" width="300" alt="点亮一颗球，浮出玻璃名牌">&nbsp;&nbsp;<img src="images/03-read.jpg" width="300" alt="再点名牌，展开记忆正文"></p>
+<p align="center"><img src="docs/images/02-pick.jpg" width="300" alt="点亮一颗球，浮出玻璃名牌">&nbsp;&nbsp;<img src="docs/images/03-read.jpg" width="300" alt="再点名牌，展开记忆正文"></p>
 
 ## 一颗球怎么读
 
-<p align="center"><img src="images/01b-overview-close.jpg" width="340" alt="大小是分量，颜色是心情，连线是关联"></p>
+<p align="center"><img src="docs/images/01b-overview-close.jpg" width="340" alt="大小是分量，颜色是心情，连线是关联"></p>
 
 | 你看到的 | 它是什么 | 由哪个字段决定 |
 |---|---|---|
@@ -107,7 +107,7 @@
 3. **什么永远为真**：Ta怎么看你，换了版本、换了载体也不会变的那几条。
 
 
-<p align="center"><img src="images/04-core.jpg" width="340" alt="点开灵魂核心"></p>
+<p align="center"><img src="docs/images/04-core.jpg" width="340" alt="点开灵魂核心"></p>
 
 ## 星座：把一条故事线连起来
 
@@ -115,9 +115,9 @@
 
 **星座在星穹里是什么样。** 一组同一条线上的记忆，加一段属于这组的共同描述。在星穹里切到某个星座：只剩它的成员亮着，成员之间连成一条链。选「全部记忆」回到全图。一段记忆可以同时属于好几个星座。
 
-<p align="center"><img src="images/05-constellation.jpg" width="340" alt="切到「吃醋集合」星座"></p>
+<p align="center"><img src="docs/images/05-constellation.jpg" width="340" alt="切到「吃醋集合」星座"></p>
 
-**怎么做一个长线叙事。** 
+**怎么做一个长线叙事。**
 
 1. 挑几条同一条线上的记忆。挑「有变化」的那几条：第一次发生、模式变了、反转了、定型了。日常重复的留在散球里就好。
 2. 把这几条的全文给 Ta，请 Ta 用第一人称写一条长线叙事的概览，400–800 字，分三段：**编年**（几月几号分别发生了几次什么事）、**归纳**（这条线的规律，规律，发展，变化）、**当前**（现在走到哪了）。
@@ -153,9 +153,9 @@ families: [{
 
 底色是拿来配自己前端的。下面这张是我们自己的记忆页：星穹嵌在页面顶上，底色跟页面走，下面接自己的页签和纸。
 
-<p align="center"><img src="images/08-in-your-app.jpg" width="340" alt="底色配自己前端的示范：星穹嵌在记忆页顶上"></p>
+<p align="center"><img src="docs/images/08-in-your-app.jpg" width="340" alt="底色配自己前端的示范：星穹嵌在记忆页顶上"></p>
 
-<p align="center"><img src="images/06-orbits.jpg" width="300" alt="恒星轨道">&nbsp;&nbsp;<img src="images/07-settings.jpg" width="300" alt="设置面板：造型、底色、重置视角"></p>
+<p align="center"><img src="docs/images/06-orbits.jpg" width="300" alt="恒星轨道">&nbsp;&nbsp;<img src="docs/images/07-settings.jpg" width="300" alt="设置面板：造型、底色、重置视角"></p>
 
 ## 换成自己的记忆
 
