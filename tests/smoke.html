@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><style>.test{width:300px;height:450px;display:inline-block}</style><div id="result"></div><div id="a" class="test"></div><div id="b" class="test"></div><script type="module">
+import * as T from 'three';
+const before=T.ColorManagement.enabled;
+const {createMemorySky}=await import('../src/index.js');
+if(T.ColorManagement.enabled!==before)throw Error('Global color management changed');
+const data={nodes:[{id:'constructor',title:'<b>普通文字</b>',content:'<img src=x onerror=alert(1)>'},{id:'__proto__',title:'特殊 ID'}],links:[['constructor','__proto__']]};
+const a=createMemorySky(document.querySelector('#a'),{data}),b=createMemorySky(document.querySelector('#b'),{data});
+a.focus('constructor');b.focus('__proto__');a.destroy();
+if(document.querySelector('#a canvas'))throw Error('Canvas survives destroy');
+if(!document.querySelector('#b canvas'))throw Error('Other instance removed');
+if('importance' in data.nodes[0])throw Error('Input mutated');
+document.querySelector('#result').textContent='PASS: defaults, prototype IDs, color isolation, input isolation, destroy isolation';
+</script>
