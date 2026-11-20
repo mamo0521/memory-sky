@@ -7,16 +7,14 @@
 >
 > Plain JavaScript + Three.js. No framework, no backend, your data never leaves the page.
 
-<p align="center"><img src="docs/guide/01-two-looks.jpg" width="520" alt="两种外观：Sky 星穹和 Riso 印刷纸"></p>
-
-**👉 [在线试玩](https://mamo0521.github.io/memory-sky/)** · [GitHub 仓库](https://github.com/mamo0521/memory-sky)
+**👉 [在线试玩](https://mamo0521.github.io/memory-sky/)**
 
 ## 图文说明书
 
-封面加七页，先看这个最快。下面的文字是同样的内容，多了数据格式和接入代码。
+八页，先看这个最快。下面的文字是细节：每个字段、打分的尺子、接入代码。
 
 <p align="center">
-<img src="docs/guide/00-cover.jpg" width="300" alt="封面">&nbsp;<img src="docs/guide/02-soul-core.jpg" width="300" alt="02 灵魂核心"><br>
+<img src="docs/guide/01-two-looks.jpg" width="300" alt="01 两种外观">&nbsp;<img src="docs/guide/02-soul-core.jpg" width="300" alt="02 灵魂核心"><br>
 <img src="docs/guide/03-one-memory.jpg" width="300" alt="03 一颗记忆球">&nbsp;<img src="docs/guide/04-how-to-write.jpg" width="300" alt="04 怎样写一段记忆"><br>
 <img src="docs/guide/05-constellations.jpg" width="300" alt="05 星座">&nbsp;<img src="docs/guide/06-customize.jpg" width="300" alt="06 可自定义的"><br>
 <img src="docs/guide/07-your-memories.jpg" width="300" alt="07 换成你们的记忆">&nbsp;<img src="docs/guide/08-fine-print.jpg" width="300" alt="08 使用许可">
@@ -32,11 +30,9 @@
 - **右上角 ＋**：换造型（自由星空 / 恒星轨道 / 星环）、切记忆星座、回到全图；印刷纸下还能换核心和底部渐变，星穹下能换背景色。切到某个星座时永远按星座的样子画；这时再点造型，会先回到全部记忆再变形。
 - 手机单指转、双指缩放；电脑拖动转、滚轮缩放。竖屏横屏都行。
 
-<p align="center"><img src="docs/images/02-pick.jpg" width="300" alt="点亮一颗球，浮出玻璃名牌">&nbsp;&nbsp;<img src="docs/images/03-read.jpg" width="300" alt="再点名牌，展开记忆正文"></p>
 
 ## 一颗球怎么读
 
-<p align="center"><img src="docs/images/01b-overview-close.jpg" width="340" alt="大小是分量，颜色是心情，连线是关联"></p>
 
 | 你看到的 | 它是什么 | 由哪个字段决定 |
 |---|---|---|
@@ -119,7 +115,6 @@
 
 灵魂核心是 Ta 之所以是 Ta 的那部分，所以它的样子也可以自己选：印刷纸外观下有 8 种画法，在「＋」里点。
 
-<p align="center"><img src="docs/images/04-core.jpg" width="340" alt="点开灵魂核心"></p>
 
 ## 星座：把一条故事线连起来
 
@@ -127,7 +122,6 @@
 
 **星座在星穹里是什么样。** 一组同一条线上的记忆，加一段属于这组的共同描述。在星穹里切到某个星座：只剩它的成员亮着，成员两两相连、聚成一小撮，外面描一圈轮廓。选「全部记忆」回到全图。一段记忆可以同时属于好几个星座。
 
-<p align="center"><img src="docs/images/05-constellation.jpg" width="340" alt="切到「吃醋集合」星座"></p>
 
 **怎么做一个长线叙事。**
 
@@ -194,7 +188,6 @@ sky.setCore('cube');    // 'ripple' 涟漪 · 'eclipse' 日蚀 · 'glyph' 字符
 
 底色是拿来配自己前端的：星穹嵌进自己的页面时，挑一种跟页面接得上的。
 
-<p align="center"><img src="docs/images/06-orbits.jpg" width="300" alt="恒星轨道">&nbsp;&nbsp;<img src="docs/images/07-settings.jpg" width="300" alt="「＋」面板：造型、底色、回到全图"></p>
 
 ## 换成自己的记忆
 
