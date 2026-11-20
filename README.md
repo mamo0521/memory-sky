@@ -7,16 +7,16 @@
 >
 > Plain JavaScript + Three.js. No framework, no backend, your data never leaves the page.
 
-<p align="center"><img src="docs/guide/00-cover.jpg" width="520" alt="记忆星穹：左边 Riso 印刷纸，右边 Sky 星穹"></p>
+<p align="center"><img src="docs/guide/01-two-looks.jpg" width="520" alt="两种外观：Sky 星穹和 Riso 印刷纸"></p>
 
 **👉 [在线试玩](https://mamo0521.github.io/memory-sky/)** · [GitHub 仓库](https://github.com/mamo0521/memory-sky)
 
 ## 图文说明书
 
-八页，先看这个最快。下面的文字是同样的内容，多了数据格式和接入代码。
+封面加七页，先看这个最快。下面的文字是同样的内容，多了数据格式和接入代码。
 
 <p align="center">
-<img src="docs/guide/01-two-looks.jpg" width="300" alt="01 两种外观">&nbsp;<img src="docs/guide/02-soul-core.jpg" width="300" alt="02 灵魂核心"><br>
+<img src="docs/guide/00-cover.jpg" width="300" alt="封面">&nbsp;<img src="docs/guide/02-soul-core.jpg" width="300" alt="02 灵魂核心"><br>
 <img src="docs/guide/03-one-memory.jpg" width="300" alt="03 一颗记忆球">&nbsp;<img src="docs/guide/04-how-to-write.jpg" width="300" alt="04 怎样写一段记忆"><br>
 <img src="docs/guide/05-constellations.jpg" width="300" alt="05 星座">&nbsp;<img src="docs/guide/06-customize.jpg" width="300" alt="06 可自定义的"><br>
 <img src="docs/guide/07-your-memories.jpg" width="300" alt="07 换成你们的记忆">&nbsp;<img src="docs/guide/08-fine-print.jpg" width="300" alt="08 使用许可">
@@ -173,7 +173,7 @@ sky.setCore('cube');    // 'ripple' 涟漪 · 'eclipse' 日蚀 · 'glyph' 字符
 
 纸纹图片和落字用的字体都在包里（`src/assets/`），不会去别的网站取。字体没加载到时用系统字体顶上，画面不受影响。
 
-试玩页可以在地址后面加参数直接开成某个样子，比如 [`?look=print&core=eclipse`](https://mamo0521.github.io/memory-sky/?look=print&core=eclipse)。
+在线试玩页默认开成印刷纸 + 日蚀核心，右上角有个箭头指着换外观的按钮。地址后面加参数可以直接开成别的样子，比如 [`?look=sky`](https://mamo0521.github.io/memory-sky/?look=sky)、[`?core=gyro`](https://mamo0521.github.io/memory-sky/?core=gyro)。
 
 ## 造型和底色
 
