@@ -1,5 +1,5 @@
 {
-  "name": "memory-sky", "version": "0.3.0", "private": true,
+  "name": "memory-sky", "version": "0.4.0", "private": true,
   "type": "module", "description": "An interactive pastel memory constellation with a spiral galaxy view.",
   "license": "PolyForm-Noncommercial-1.0.0", "exports": {".": "./src/index.js", "./style.css": "./src/style.css"},
   "files": ["src", "LICENSE", "README.md", "使用说明.md", "THIRD_PARTY_NOTICES.md"],

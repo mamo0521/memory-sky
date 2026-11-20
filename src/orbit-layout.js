@@ -1,4 +1,4 @@
-// Copyright (c) 2026 mamo and contributors. MIT.
+// Copyright (c) 2026 mamo and contributors. PolyForm Noncommercial 1.0.0 (see LICENSE).
 // Independent circular orbits; angles and rates are stable for each memory.
 export function orbitFor(item, hash) {
   if (item.core) return { radius: 0, phase: 0, tilt: 0, node: 0, rate: 0 };

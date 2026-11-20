@@ -1,4 +1,4 @@
-// Copyright (c) 2026 mamo and contributors. MIT.
+// Copyright (c) 2026 mamo and contributors. PolyForm Noncommercial 1.0.0 (see LICENSE).
 export function galaxyLayout(items, hash) {
   const placed = [];
   const outerRadius = 238 * Math.sqrt(1.5);

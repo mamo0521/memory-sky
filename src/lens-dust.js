@@ -1,4 +1,4 @@
-// Copyright (c) 2026 mamo and contributors. MIT.
+// Copyright (c) 2026 mamo and contributors. PolyForm Noncommercial 1.0.0 (see LICENSE).
 export function lensDust(T) {
   const geometry = new T.BufferGeometry();
   geometry.setAttribute("position", new T.Float32BufferAttribute(new Float32Array(12), 3));

@@ -1,4 +1,4 @@
-// Copyright (c) 2026 mamo and contributors. MIT.
+// Copyright (c) 2026 mamo and contributors. PolyForm Noncommercial 1.0.0 (see LICENSE).
 import { ShaderMaterial, Color, NormalBlending } from "three";
 export function threadMaterial(color, opacity, farFade = .18) {
   const m = new ShaderMaterial({

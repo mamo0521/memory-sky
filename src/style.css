@@ -1,16 +1,108 @@
 .memory-sky{position:relative;isolation:isolate;overflow:hidden;width:100%;height:100%;min-height:440px;color:#f5edf8;font-family:system-ui,-apple-system,"PingFang SC",sans-serif;background:radial-gradient(ellipse at 31% 29%,#b4a5cb35,transparent 50%),radial-gradient(ellipse at 75% 67%,#a6b9e12e,transparent 54%),radial-gradient(ellipse at 46% 44%,transparent 20%,#352e502b 100%),var(--ms-bg,#726786);transition:background-color .5s}
-.memory-sky *{box-sizing:border-box}.memory-sky [hidden]{display:none!important}.ms-map{position:absolute;inset:0}.ms-map>canvas{position:absolute;inset:0;touch-action:none}.ms-heading{position:absolute;left:24px;top:24px;font-size:13px;letter-spacing:.18em;color:#eee6f2b0;pointer-events:none}.memory-sky button,.memory-sky select{font:inherit;color:inherit}.memory-sky button{cursor:pointer}.memory-sky button:focus-visible,.memory-sky select:focus-visible{outline:2px solid #f5e4c6;outline-offset:3px}
+.memory-sky *{box-sizing:border-box}.memory-sky [hidden]{display:none!important}.ms-map{position:absolute;inset:0}.ms-map>canvas{position:absolute;inset:0;touch-action:none}.ms-heading{position:absolute;left:24px;top:24px;font-size:13px;letter-spacing:.18em;color:#eee6f2b0;pointer-events:none}.memory-sky button{font:inherit;color:inherit}.memory-sky button{cursor:pointer}.memory-sky button:focus-visible{outline:2px solid #f5e4c6;outline-offset:3px}
 .ms-glass,.ms-label{background:rgba(0,0,0,.18);border:0;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.25),0 3px 12px #0000000d;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
-.ms-label{border-radius:7px;padding:4px 7px;min-height:0;width:max-content;max-width:none;text-align:center;line-height:1.25;color:#faf3ff;white-space:nowrap;transition:opacity .2s;text-shadow:0 1px 3px #30273960}.ms-label span{margin-left:5px;color:#dedde2}.ms-plus{position:absolute;right:20px;top:17px;width:29px;height:29px;border-radius:9px;font-size:20px!important;font-weight:300;z-index:4}.ms-menu{position:absolute;right:20px;top:54px;z-index:5;width:236px;border-radius:18px;padding:18px;display:grid;gap:16px}.ms-menu label{display:grid;gap:7px;font-size:12px;color:#e9def0}.ms-menu select,.ms-menu>button{border:1px solid #e4d8ed44;border-radius:10px;background:#625570b3;padding:10px;font-size:16px}.ms-menu option{background:#6e627e}.ms-hint{position:absolute;bottom:22px;left:14px;right:14px;text-align:center;font-size:11px;letter-spacing:.08em;color:#e5daeca6;pointer-events:none}.ms-status{position:absolute;top:65px;left:24px;font-size:11px;color:#e4d9eb;pointer-events:none;max-width:55%}
+.ms-label{border-radius:7px;padding:4px 7px;min-height:0;width:max-content;max-width:none;text-align:center;line-height:1.25;color:#faf3ff;white-space:nowrap;transition:opacity .2s;text-shadow:0 1px 3px #30273960}.ms-label span{margin-left:5px;color:#dedde2}.ms-hint{position:absolute;bottom:22px;left:14px;right:14px;text-align:center;font-size:11px;letter-spacing:.08em;color:#e5daeca6;pointer-events:none}.ms-status{position:absolute;top:65px;left:24px;font-size:11px;color:#e4d9eb;pointer-events:none;max-width:55%}
 .ms-memory{position:absolute;z-index:3;bottom:24px;left:50%;transform:translateX(-50%);width:min(460px,calc(100% - 40px));max-height:min(33%,280px);overflow:auto;overscroll-behavior:contain;border-radius:16px;padding:18px 18px 20px;background:rgba(0,0,0,.21);animation:ms-rise .35s ease-out}.ms-memory h2{font-family:ui-serif,"Songti SC",serif;font-size:18px;font-weight:500;margin:6px 24px 12px 0;line-height:1.4;outline:none}.ms-date{font-size:10px;letter-spacing:.08em;color:#e1d4e5;margin:0}.ms-content{font-size:13px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;color:#f4edf7}.ms-close{position:sticky;float:right;margin:-6px -6px 0 0;top:0;border:0;background:transparent;width:26px;height:26px;font-size:18px!important;color:#eadfec}.ms-memory::-webkit-scrollbar{width:4px}.ms-memory::-webkit-scrollbar-thumb{background:#e8dff14d;border-radius:4px}@keyframes ms-rise{from{opacity:0;transform:translate(-50%,16px)}to{opacity:1;transform:translate(-50%,0)}}@media(prefers-reduced-motion:reduce){.ms-memory{animation:none}.ms-label{transition:none}}@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.ms-glass,.ms-label{background:rgba(0,0,0,.32)}}
 
+.ms-scores{font-size:10px;letter-spacing:.08em;color:#e1d4e5;margin:-4px 0 12px;font-variant-numeric:tabular-nums}
 .ms-divider{border:0;height:.5px;background:rgba(255,255,255,.2);margin:0 0 13px}
 
-.memory-sky .ms-label{background:rgba(0,0,0,.4);color:#b09a87}.memory-sky .ms-plus{color:#b09a87}
+.memory-sky .ms-label{background:rgba(0,0,0,.4);color:#b09a87}
 
-.memory-sky .ms-memory h2{color:#b09a87}.memory-sky .ms-memory .ms-date,.memory-sky .ms-memory .ms-content,.memory-sky .ms-memory .ms-close{color:rgba(255,255,255,.9)}
+.memory-sky .ms-memory h2{color:#b09a87}.memory-sky .ms-memory .ms-date,.memory-sky .ms-memory .ms-scores,.memory-sky .ms-memory .ms-content,.memory-sky .ms-memory .ms-close{color:rgba(255,255,255,.9)}
 
-.memory-sky .ms-gear{right:20px;top:17px;display:grid;place-items:center;padding:0;color:#b09a87}.memory-sky .ms-gear svg{display:block}.memory-sky .ms-plus:not(.ms-gear){right:58px}
-.ms-settings{width:252px}.ms-group{display:grid;gap:8px;font-size:12px;color:#e9def0}.ms-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.ms-row button{border:1px solid #e4d8ed44;border-radius:10px;background:#625570b3;padding:9px 4px;font-size:13px}.ms-row button[aria-pressed=true]{background:#b09a87;color:#2f2836;border-color:#b09a87}
-.ms-swatches{grid-template-columns:repeat(4,1fr)}.ms-swatch{height:30px;border-radius:9px;border:1px solid #e4d8ed44!important;padding:0!important;box-shadow:inset 0 0 0 1px #ffffff1f}.ms-swatch[aria-pressed=true]{outline:2px solid #b09a87;outline-offset:2px}
-.ms-menu>.ms-reset{border:1px solid #e4d8ed44;border-radius:10px;background:#625570b3;padding:10px;font-size:16px}
+/* 右上角两颗钮：左边换外观（两颗星，印刷纸下转半圈、大小星对调），右边「＋」开选项面板 */
+.ms-ctrl{position:absolute;right:20px;top:17px;z-index:6;display:flex;gap:6px}
+.memory-sky .ms-btn{width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;padding:0;border-radius:9px;border:1px solid rgba(245,228,198,.6);background:rgba(22,18,30,.3);color:#f5e4c6;font-size:15px;line-height:1}
+.memory-sky .ms-btn:hover{background:rgba(22,18,30,.46)}
+.ms-look svg{width:16px;height:16px;display:block;transition:transform .45s cubic-bezier(.3,1.4,.5,1)}
+.ms-look.ms-flip svg{transform:rotate(180deg)}
+/* 「＋」面板：每一行都是「两个字的标签 + 右边的控件」，标签一列对齐、控件一样高一样宽；组和组之间一道细线 */
+.ms-panel{position:absolute;right:20px;top:55px;z-index:5;width:232px;max-width:calc(100% - 40px);max-height:calc(100% - 70px);overflow:auto;overscroll-behavior:contain;display:flex;flex-direction:column;align-items:stretch;gap:7px;padding:11px;border-radius:14px;background:rgba(22,18,30,.56);border:1px solid rgba(245,228,198,.3);box-shadow:0 8px 26px #29213b30;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.ms-row{display:grid;grid-template-columns:28px minmax(0,1fr);align-items:center;gap:9px;font-size:11px;letter-spacing:.06em;white-space:nowrap;color:#eee3f2}
+/* 选项一律横排点选：定数的一行等分（造型 3），多的是能左右划的条（核心、星座，都是文字小标签），右边缘淡出提示还有。
+   没选中的：透明底、很淡的细框、字淡一点；选中的：实心底（星穹淡金底深字、印刷纸深墨底浅字），不加投影 */
+.ms-panel *{-webkit-user-drag:none;-webkit-user-select:none;user-select:none}   /* 横滑条里按住拖：不拖出东西、不选中字 */
+.ms-chips{display:grid;gap:5px;min-width:0}.ms-2{grid-template-columns:repeat(2,1fr)}.ms-3{grid-template-columns:repeat(3,1fr)}
+.ms-chips button,.ms-tags button{height:28px;min-width:0;padding:0;font-size:11px;letter-spacing:0;white-space:nowrap;color:rgba(245,228,198,.78);background:transparent;border:1px solid rgba(245,228,198,.28);border-radius:8px}
+.ms-chips button[aria-pressed=true],.ms-tags button[aria-pressed=true]{background:#f5e4c6;color:#2e2937;border-color:#f5e4c6}
+.ms-strip{display:flex;gap:5px;min-width:0;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;padding:0 3px 3px 0;margin-bottom:-3px}
+.ms-strip::-webkit-scrollbar{display:none}
+.ms-strip>button{flex:0 0 auto;scroll-snap-align:start}
+.ms-strip.ms-more{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 22px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 22px),transparent)}
+.ms-tags button{padding:0 10px}
+.ms-row.ms-top{align-items:start}.ms-row.ms-top>span{line-height:26px}
+.ms-sub{display:grid;gap:4px;min-width:0}
+.ms-sub label,.ms-sub .ms-line{display:grid;grid-template-columns:24px minmax(0,1fr);align-items:center;gap:8px;min-height:26px;font-size:10px;letter-spacing:.04em}
+.ms-sub i{font-style:normal;opacity:.62}
+/* 颜色：一排圆色块——最左是自选（彩色细圈里一颗当前色），右边三个预设；正在用的那颗外面一圈深墨细环 */
+.ms-dots{display:flex;align-items:center;gap:9px;padding-left:2px}
+.memory-sky .ms-dots>button,.ms-pick{flex:0 0 20px;width:20px;height:20px;padding:0;border-radius:50%}
+.memory-sky .ms-dots>button{background:var(--c);border:1px solid rgba(58,47,41,.22)}
+.ms-pick{position:relative;padding:2px;background:conic-gradient(#ff5a5a,#ffd23f,#7be36a,#3fc6f2,#8a6cff,#ff5ad2,#ff5a5a)}
+.ms-pick input{-webkit-appearance:none;appearance:none;display:block;width:16px;height:16px;padding:0;margin:0;border:1.5px solid #f1e9da;border-radius:50%;background:none;cursor:pointer}
+.ms-pick input::-webkit-color-swatch-wrapper{padding:0}
+.ms-pick input::-webkit-color-swatch{border:none;border-radius:50%}
+.ms-pick input::-moz-color-swatch{border:none;border-radius:50%}
+.ms-dots>[aria-pressed=true]{outline:1px solid #3a2f29;outline-offset:2px}
+/* 位置 / 透明两根滑杆：3px 高的橘色网点，划过的那段点密、没划过的稀；拇指 12px 小圆、暖纸底深墨框 */
+.ms-rng{position:relative;display:block;min-width:0;height:26px}
+.ms-rng::before{content:"";position:absolute;left:0;top:50%;height:3px;margin-top:-1.5px;width:calc(6px + (100% - 12px) * var(--p,0));pointer-events:none;
+  background:radial-gradient(circle,#EA6D1A 0 1.05px,transparent 1.35px) 0 50%/3px 3px repeat-x}
+.ms-rng input{touch-action:none;-webkit-appearance:none;appearance:none;position:relative;display:block;width:100%;min-width:0;height:26px;margin:0;padding:0;background:transparent;cursor:pointer}
+.ms-rng input::-webkit-slider-runnable-track{height:3px;border:none;background:radial-gradient(circle,rgba(234,109,26,.75) 0 .8px,transparent 1.1px) 0 50%/6px 3px repeat-x}
+.ms-rng input::-moz-range-track{height:3px;border:none;background:radial-gradient(circle,rgba(234,109,26,.75) 0 .8px,transparent 1.1px) 0 50%/6px 3px repeat-x}
+.ms-rng input::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:12px;height:12px;margin-top:-4.5px;border-radius:50%;background:#EFE6D6;border:1px solid #3a2f29}
+.ms-rng input::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:#EFE6D6;border:1px solid #3a2f29}
+.ms-swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.ms-swatch{height:28px;border-radius:8px;border:1px solid #d9ccec55;padding:0;box-shadow:inset 0 0 0 1px #ffffff1f}.ms-swatch[aria-pressed=true]{outline:2px solid #f5e4c6;outline-offset:2px}
+.ms-row.ms-sep{border-top:1px solid rgba(245,228,198,.22);padding-top:9px;margin-top:2px}
+.ms-panel .ms-reset{position:relative;height:30px;margin-top:10px;padding:0;font-size:12px;letter-spacing:.06em;color:#f5e4c6;background:rgba(255,255,255,.08);border:1px solid rgba(245,228,198,.3);border-radius:8px}
+.ms-reset::before{content:"";position:absolute;left:-1px;right:-1px;top:-10px;border-top:1px solid rgba(245,228,198,.22)}
+
+/* —— 印刷纸外观（0.4.0）——
+   字体：落下的字母用这几款（都在 src/assets/fonts）；没加载到会落到系统字体。 */
+@font-face{font-family:"MemorySkyAboreto";src:url("./assets/fonts/Aboreto-latin.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"MemorySkyPlayfair";src:url("./assets/fonts/PlayfairDisplay-latin.woff2") format("woff2");font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:"MemorySkyPlayfair";src:url("./assets/fonts/PlayfairDisplay-Italic-latin.woff2") format("woff2");font-weight:400 900;font-style:italic;font-display:swap}
+@font-face{font-family:"MemorySkyCaveat";src:url("./assets/fonts/Caveat-latin.woff2") format("woff2");font-display:swap}
+/* 盖在星图上的两层：底部渐变（正片叠底）、四周一圈旧黄 */
+.ms-grad,.ms-edge{position:absolute;pointer-events:none;display:none}
+.ms-grad{left:0;right:0;bottom:0;height:var(--ms-grad-h,40%);mix-blend-mode:multiply;background:linear-gradient(to top,var(--ms-grad-c,#A996D8),transparent);opacity:var(--ms-grad-a,1)}
+.ms-edge{inset:0;background:radial-gradient(ellipse 88% 72% at 50% 45%,rgba(168,124,66,0) 42%,rgba(168,124,66,.15) 70%,rgba(146,102,52,.42) 100%)}
+.memory-sky.ms-print .ms-grad,.memory-sky.ms-print .ms-edge{display:block}
+/* 纸是浅的：压在星图上的字、按钮、菜单、读记忆的面板换成深墨色 */
+.memory-sky.ms-print{color:#3a2f29;transition:none}   /* 换成纸是一下子换的：不让底色从星穹紫慢慢过渡过来 */
+.memory-sky.ms-print .ms-heading{color:rgba(58,47,41,.8)}
+.memory-sky.ms-print .ms-hint{color:rgba(58,47,41,.72)}
+.ms-hint-en{display:none}
+/* 印刷纸下底部提示：两头加方括号，下面一行全大写等宽小字，和左上角的竖排小字首尾呼应 */
+.memory-sky.ms-print .ms-hint-zh::before{content:"[ ";margin-right:.5em}
+.memory-sky.ms-print .ms-hint-zh::after{content:" ]";margin-left:.5em}
+.memory-sky.ms-print .ms-hint-en{display:block;margin-top:4px;font:6.5px/1 ui-monospace,Menlo,monospace;letter-spacing:1.4px;text-transform:uppercase;color:rgba(58,47,41,.62)}
+.memory-sky.ms-print .ms-status{color:#3a2f29}
+.memory-sky.ms-print .ms-glass{background:rgba(246,240,228,.9);box-shadow:inset 0 0 0 1px rgba(58,47,41,.42),0 6px 18px #3a2f2922;backdrop-filter:none;-webkit-backdrop-filter:none}
+.memory-sky.ms-print .ms-btn{background:#EFE6D6;border:1px solid #3a2f29;border-radius:5px;color:#3a2f29;box-shadow:2px 2px 0 #3a2f29;transition:transform .08s,box-shadow .08s}
+.memory-sky.ms-print .ms-btn:hover{background:#EFE6D6}
+.memory-sky.ms-print .ms-btn:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #3a2f29}
+.memory-sky.ms-print .ms-panel{background:#f1e9daf5;border-color:#3a2f2955;box-shadow:0 6px 18px #3a2f2922;backdrop-filter:none;-webkit-backdrop-filter:none}
+.memory-sky.ms-print .ms-row{color:#3a2f29}
+.memory-sky.ms-print .ms-reset{color:#3a2f29;background:#f8f2e6;border-color:#3a2f2955}
+/* 印刷纸下的点选按钮：没选中透明底、淡墨细框；选中深墨底浅字，不加投影 */
+.memory-sky.ms-print .ms-chips button,.memory-sky.ms-print .ms-tags button{color:rgba(58,47,41,.7);background:transparent;border-color:rgba(58,47,41,.28);border-radius:5px}
+.memory-sky.ms-print .ms-chips button[aria-pressed=true],.memory-sky.ms-print .ms-tags button[aria-pressed=true]{color:#f4ecdc;background:#3a2f29;border-color:#3a2f29}
+.memory-sky.ms-print .ms-row.ms-sep,.memory-sky.ms-print .ms-reset::before{border-top-color:rgba(58,47,41,.16)}
+.memory-sky.ms-print button:focus-visible{outline-color:#3a2f29}
+.memory-sky.ms-print .ms-memory{background:rgba(246,240,228,.95)}
+.memory-sky.ms-print .ms-memory h2{color:#3a2f29}
+.memory-sky.ms-print .ms-memory .ms-date,.memory-sky.ms-print .ms-memory .ms-scores{color:rgba(58,47,41,.62)}
+.memory-sky.ms-print .ms-memory .ms-content,.memory-sky.ms-print .ms-memory .ms-close{color:rgba(58,47,41,.9)}
+.memory-sky.ms-print .ms-divider{background:rgba(58,47,41,.28)}
+.memory-sky.ms-print .ms-memory::-webkit-scrollbar-thumb{background:#3a2f2955}
+/* 名牌在纸上是一张直角小纸片：实线框、左边一道墨条、右下一道硬影 */
+.memory-sky .ms-label.ms-label-print{background:#f6f0e4;color:#3a2f29;border:1px solid #3a2f29;border-left-width:5px;border-radius:0;letter-spacing:.04em;box-shadow:2px 2px 0 rgba(58,47,41,.3);text-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.memory-sky .ms-label.ms-label-print span{color:rgba(58,47,41,.6)}
+/* 左上角那几列竖排小字让开标题 */
+.memory-sky .ms-fine{left:24px!important;top:52px!important}
+
+.memory-sky .ms-menu,.memory-sky .ms-menu *{-webkit-tap-highlight-color:transparent}

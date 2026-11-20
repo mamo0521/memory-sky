@@ -1,4 +1,4 @@
-// Copyright (c) 2026 mamo and contributors. MIT.
+// Copyright (c) 2026 mamo and contributors. PolyForm Noncommercial 1.0.0 (see LICENSE).
 // A broad annulus, with jittered positions and only a small collision clearance.
 export function ringLayout(items, hash) {
   const placed=[];

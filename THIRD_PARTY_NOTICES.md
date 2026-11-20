@@ -3,6 +3,8 @@
 - Runtime: Three.js 0.185.1 and its TrackballControls addon, MIT, copyright 2010–2026 three.js authors. Full license below.
 - Development: Vite and esbuild, MIT; their package license files are installed with development dependencies.
 - Visual inspiration: React Bits Particles (https://reactbits.dev/backgrounds/particles). This package does not distribute the React Bits component, React, or OGL. Its independently implemented Three.js dust renderer uses a coherent spatial wave for motion and a separate gated twinkle clock; it does not use the reference component displacement shader. React Bits itself has separate MIT + Commons Clause terms; see https://github.com/DavidHDev/react-bits/blob/main/LICENSE.md before importing that component separately.
+- Fonts (print look, `src/assets/fonts/`): Aboreto, Playfair Display and Caveat, Latin subsets, SIL Open Font License 1.1. Each font's license text sits next to the font files.
+- Paper textures (print look, `src/assets/paper/`): generated for this project; covered by this package's own license.
 
 ## Three.js license
 

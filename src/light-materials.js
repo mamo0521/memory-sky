@@ -1,4 +1,4 @@
-// Copyright (c) 2026 mamo and contributors. MIT.
+// Copyright (c) 2026 mamo and contributors. PolyForm Noncommercial 1.0.0 (see LICENSE).
 import { ShaderMaterial, Vector3, NormalBlending } from "three";
 const vertexShader = `
   varying vec2 vDisc;

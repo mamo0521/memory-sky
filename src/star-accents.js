@@ -1,4 +1,4 @@
-// Copyright (c) 2026 mamo and contributors. MIT.
+// Copyright (c) 2026 mamo and contributors. PolyForm Noncommercial 1.0.0 (see LICENSE).
 export function starAccents(T, scene) {
   const geometry = new T.PlaneGeometry(2, 2);
   const material = (uniforms, vertexShader, fragmentShader) => new T.ShaderMaterial({
@@ -11,11 +11,13 @@ export function starAccents(T, scene) {
     toneMapped: false
   });
   const ring = new T.Mesh(geometry, material(
-    { uAlpha: { value: 0 }, uColor: { value: new T.Color("#e4eaff") } },
+    { uAlpha: { value: 0 }, uColor: { value: new T.Color("#e4eaff") }, uLine: { value: 0 } },
     "varying vec2 vUv; void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}",
-    `varying vec2 vUv; uniform float uAlpha; uniform vec3 uColor;
+    `varying vec2 vUv; uniform float uAlpha,uLine; uniform vec3 uColor;
      void main(){float d=length(vUv-.5)*2.; float rim=exp(-pow((d-.82)/.025,2.));
-       float soft=exp(-pow((d-.82)/.09,2.));gl_FragColor=vec4(uColor,(rim*.7+soft*.3)*uAlpha);}`
+       float soft=exp(-pow((d-.82)/.09,2.));
+       float fw=fwidth(d), line=1.-smoothstep(.55*fw,1.45*fw,abs(d-.82));   // 印刷纸下：一条约 2px 的干净细线，没有晕
+       gl_FragColor=vec4(uColor,mix(rim*.7+soft*.3,line,uLine)*uAlpha);}`
   ));
   const meteor = new T.Mesh(geometry, material(
     { uHead: { value: new T.Vector2() }, uViewport: { value: new T.Vector2(1, 1) }, uAlpha: { value: 0 }, uLength: { value: 64 }, uDirection: { value: new T.Vector2(0.86, 0.51) } },
@@ -37,6 +39,7 @@ export function starAccents(T, scene) {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let pulse = null, meteorStart = null, nextMeteor = 4 + Math.random() * 3, origin = { x: 0, y: 0 };
   return {
+    ink: false,   // 印刷纸外观：选中那一圈用深墨色（浅色在纸上看不见）
     pulse(sprite, t) {
       pulse = { sprite, start: t };
     },
@@ -63,7 +66,9 @@ export function starAccents(T, scene) {
           ring.scale.setScalar((s.displayRadius||s.r) * (1 + 1.15 * (1 - Math.pow(1 - age, 2))) / 0.82);
           ring.material.uniforms.uAlpha.value = 0.36 * Math.sin(Math.PI * Math.sqrt(age)) * Math.pow(1 - age, 0.65);
           const color = s.body.material.uniforms?.uColor?.value;
-          if (color?.isVector3) ring.material.uniforms.uColor.value.setRGB(0.4 + 0.6 * color.x, 0.4 + 0.6 * color.y, 0.4 + 0.6 * color.z);
+          ring.material.uniforms.uLine.value = this.ink ? 1 : 0;
+          if (this.ink) { ring.material.uniforms.uColor.value.set("#3a2f29"); ring.material.uniforms.uAlpha.value *= 2.2; }
+          else if (color?.isVector3) ring.material.uniforms.uColor.value.setRGB(0.4 + 0.6 * color.x, 0.4 + 0.6 * color.y, 0.4 + 0.6 * color.z);
           else ring.material.uniforms.uColor.value.set("#e4eaff");
         }
       }
